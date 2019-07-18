@@ -1,11 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+What I have learned so far with rails
 
-Things you may want to cover:
+Git version control system
 
-* Ruby version
+> create new repo 
+> create new branch
+> switching between branches
 
 * System dependencies
 
