@@ -1,0 +1,15 @@
+<%= form_for @author do |form| %>
+
+<%= form.label :name %>
+<%= form.text_field :name %>
+<br>
+<label>your age</label>
+<%= form.text_field :age %> <br>
+
+<label>City Name</label>
+<%= form.text_field :city %> <br>
+<label>POstal Code</label>
+<%= form.text_field :postal %> <br>
+
+<%= form.submit %>
+<% end %>
