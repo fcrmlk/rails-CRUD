@@ -4,9 +4,11 @@ What I have learned so far with rails
 
 Git version control system
 
-> create new repo 
-> create new branch
-> switching between branches
+* create new repo 
+
+* create new branch
+
+* switching between branches
 
 * System dependencies
 
