@@ -1,5 +1,4 @@
 class AuthorsController < ApplicationController
-  
   before_action :find_record_from_database, only: [:edit, :show, :destroy, :update]
 
   def index
@@ -24,6 +23,7 @@ class AuthorsController < ApplicationController
   end
 
   def create
+
     @user = Author.new(strong_params_for_author)
     @user.save
     redirect_to authors_path
