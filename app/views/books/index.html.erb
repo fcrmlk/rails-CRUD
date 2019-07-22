@@ -1,0 +1,36 @@
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title"><%=@author.name %> Books list</h5>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Author</th>
+					<th scope="col">Name</th>
+					<th scope="col">Price</th>
+					<th scope="col">Description</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% @books.each do |book| %>
+				<tr>
+					<td scope="row"><%= book.author.name %></td>
+					<td><%= book.name %></td>
+					<td><%= book.price %></td>
+					<td><%= book.description %></td>
+					<td><%= link_to 'Edit Book Details', edit_author_book_path(book.author, book) %> |
+					<%= link_to 'Show Book Details', author_book_path(book.author, book) %>
+					
+						<%#= link_to "Delete", author_url(author), method: :delete, data: { confirm: "Are you sure?" } %>
+						<%#= link_to 'Destroy', author_url(author),data: {:confirm => 'Are you sure?'}, :method => :delete %>
+							
+						</td>
+					</tr>
+					<% end %>
+
+				</tbody>
+			</table>
+			<%= link_to 'Create New Book Record', new_author_book_path %>
+		</div>
+	</div>
+

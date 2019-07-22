@@ -1,0 +1,33 @@
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Books Details</h5>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Author</th>
+					<th scope="col">Name</th>
+					<th scope="col">Price</th>
+					<th scope="col">Description</th>
+					<th scope="col">Actions</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<td scope="row"><%= @book.author.name %></td>
+					<td><%= @book.name %></td>
+					<td><%= @book.price %></td>
+					<td><%= @book.description %></td>
+					<td><%= link_to 'Edit Book Details', edit_author_book_path(@book.author, @book) %> |
+						<%= link_to 'All Books', author_books_path(@book.author) %> |
+						<%= link_to "Delete", author_book_path(@book.author , @book), method: :delete, data: { confirm: "Are you sure?" } %>
+							
+						</td>
+					</tr>
+
+				</tbody>
+			</table>
+			<%= link_to 'Create New Book Record', new_author_book_path %>
+		</div>
+	</div>
+

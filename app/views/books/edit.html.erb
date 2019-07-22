@@ -1,0 +1,41 @@
+	<%= form_for [@author , @book], html: {class: 'form-horizontal'} do |form| %>
+	<fieldset>
+
+		<!-- Form Name -->
+		<legend><%= "Create Book " "for #{@author.name}" %></legend>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="email"></label>  
+			<div class="col-md-4">
+				<%= form.text_field :name, id: 'email', placeholder: 'Book Name', class: "form-control input-md", required: true %>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="password"></label>  
+			<div class="col-md-4">
+				<%= form.text_field :price, id: 'email', placeholder: 'Book Price', class: "form-control input-md", required: true %>
+			</div>
+		</div>
+
+		<!-- Text input-->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="password"></label>  
+			<div class="col-md-4">
+				<%= form.text_field :description, id: 'email', placeholder: 'Book description', class: "form-control input-md", required: true %>
+			</div>
+		</div>
+
+
+		<!-- Button -->
+		<div class="form-group">
+			<label class="col-md-4 control-label" for="submit"></label>
+			<div class="col-md-4">
+				<%= form.submit "Update Book Record", class: "btn btn-primary" %>
+			</div>
+		</div>
+
+	</fieldset>
+<% end %>
