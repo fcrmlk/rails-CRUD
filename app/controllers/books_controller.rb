@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-
+  	protect_from_forgery with: :null_session
 	before_action :find_author_for_book, only: [:index, :new, :create, :edit, :show, :destroy]
 
 	def index

@@ -1,4 +1,5 @@
 class AuthorsController < ApplicationController
+  protect_from_forgery with: :null_session
   before_action :find_record_from_database, only: [:edit, :show, :destroy, :update]
 
   def index

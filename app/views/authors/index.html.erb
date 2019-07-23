@@ -22,8 +22,8 @@
 					<td><%= author.postal %></td>
 					<td><%= link_to 'Edit Author Details', edit_author_url(author) %></td>
 					<td><%= link_to 'Show Author Details', author_url(author) %></td>
-					<td><%= link_to 'Destroy', author_url(author),
-						data: {:confirm => 'Are you sure?'}, :method => :delete %></td>
+					<td><%= link_to 'Destroy', author_path(author),
+						method: :delete, data: { confirm: 'Are you sure?'} %></td>
 					</tr>
 					<% end %>
 
