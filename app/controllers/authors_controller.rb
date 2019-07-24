@@ -11,7 +11,14 @@ class AuthorsController < ApplicationController
     @author = Author.new
   end
 
+   def create
+    @user = Author.new(strong_params_for_author)
+    @user.save
+    redirect_to authors_path
+  end
+
   def edit
+
   end
 
   def update
@@ -21,13 +28,7 @@ class AuthorsController < ApplicationController
   end
 
   def show
-  end
-
-  def create
-
-    @user = Author.new(strong_params_for_author)
-    @user.save
-    redirect_to authors_path
+    @haid3r=@author.id
   end
 
   def destroy

@@ -1,4 +1,29 @@
-<%= @author.name %><br>
-<%= @author.age %><br>
-<%= @author.city %><br>
-<%= @author.postal %><br>
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Books Details</h5>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Author</th>
+					<th scope="col">Name</th>
+					<th scope="col">Age</th>
+					<th scope="col">City</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<td scope="row"><%= @author.name %></td>
+					<td><%= @author.age %></td>
+					<td><%= @author.city %></td>
+					<td><%= @author.postal %></td>
+					</tr>
+
+				</tbody>
+			</table>
+			<%= link_to 'Home', authors_path %> |
+			<%= link_to 'Edit', edit_author_path %> |
+			<%= link_to "Delete", author_path(@author.id), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+	</div>
+

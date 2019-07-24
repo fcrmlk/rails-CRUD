@@ -16,7 +16,7 @@
 				<% @authors.each do |author| %>
 				<tr>
 					<th scope="row"><%= author.id%></th>
-					<td><%= author.name %></td>
+					<td><%= link_to author.name ,author_books_path(author.id)%></td>
 					<td><%= author.age %></td>
 					<td><%= author.city %></td>
 					<td><%= author.postal %></td>
