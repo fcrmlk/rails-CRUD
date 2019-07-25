@@ -1,0 +1,27 @@
+<div class="card">
+	<div class="card-body">
+		<h5 class="card-title">Department</h5>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">Department</th>
+					<th scope="col">Name</th>
+					<th scope="col">Code</th>
+					<th scope="col">Block</th>
+				</tr>
+			</thead>
+			<tbody>
+				
+				<tr>
+					<td></td>
+					<td scope="row"><%= @department.name %></td>
+					<td><%= @department.code %></td>
+					<td><%= @department.block %></td>
+					</tr>
+
+				</tbody>
+			</table>
+			<%= link_to "Delete", author_departments_path(@author.id), method: :delete, data: { confirm: "Are you sure?" } %>
+		</div>
+	</div>
+

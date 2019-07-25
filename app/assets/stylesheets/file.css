@@ -152,5 +152,7 @@ a{
   color:#2c7715;
 }
     
-    
-    
+.font-face {
+  font-family: "font1";
+  src: url(/fonts/font1.otf) format("truetype");
+}
